@@ -123,8 +123,11 @@ public class TechJobs {
         //HashMap is the value type FOR the ArrayList
         //
         // 1. need code to run if there are any jobs located within someJobs (1+) - start with if statement for any size > 0 so it will run as long as there is something
-        if (someJobs.size() > 0)    {
-
+        if (someJobs.size() == 0) {
+            //put print instead of println and the NoResults test FINALLY passed - I googled for an hour trying alllll types of random things to try and figure this out because it was my only non-passing test - ARGH!
+            //lesson learned: if there is an extra line showing on the test, put print instead of println.......
+            System.out.print("No Results");
+        } else {
             // 3. for-each loop; job is loop variable "for each job in someJobs, run the following code"
             for (HashMap<String, String> job : someJobs)    {
 
@@ -138,9 +141,9 @@ public class TechJobs {
             }
         }
         // 2. else statement for when there are no jobs within the .csv file, or something is searched for that doesn't exist (Cancun as a location), No Results will be returned
-        else {
-            System.out.println("No Results");
-        }
+//        else {
+//            System.out.println("No Results");
+//        }
 //        System.out.println("printJobs is not implemented yet");
     }
 }
